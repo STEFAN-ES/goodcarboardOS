@@ -1,0 +1,139 @@
+.header
+  &_logo
+    background: url('../img/good_cardboard.png') center no-repeat
+    background-size: 100%
+    width: 191px
+    height: 61px
+  &-contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &__button
+      margin-left: 27px
+      font-size: 14px
+      color: $text-color-light
+    &__phone
+      &s
+        display: flex
+      font-size: 22px
+      &:first-child
+        padding-right: 13px
+        border-right: 1px solid #cfcfd0 
+      &:last-child
+        margin: 0 0 0 13px
+        margin-left: 13px
+      a
+        color: $text-color-dark
+        text-decoration: none
+        position: relative
+        &:hover
+        &::before
+          content: ''
+          bottom: 0
+          right: 0
+          position: absolute
+          width: 0%
+          height: 2px
+          background-color: $active-color
+          transition: 0.2s
+        &:hover:before
+          width: 100%
+          left: 0
+
+nav
+  padding: 8px 0
+  background: $text-color-dark
+  .nav-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    .item
+      text-align: center
+      vertical-align: center
+      padding: 4px 12px    
+      border-right: 1px dotted #5f5f5f
+      &:last-child
+        border-right: none
+      a
+        text-transform: uppercase
+        color: $text-color-light
+        text-decoration: none
+        font-size: 12px
+        &:hover
+          color: $active-color
+
+section.contacts
+  padding: 14px 0
+.menu
+  &-logo-wrap
+    display: flex
+    justify-content: center
+  &-link
+    display: flex
+    align-items: center
+    margin-right: 15px
+    z-index: 12
+    &-line
+      position: relative
+      display: block
+      height: 3px
+      width: 20px
+      background-color: $text-color-dark
+      transition: all 0.2s
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        height: 3px
+        width: 20px
+        background-color: $text-color-dark
+        bottom: 7px
+        transition: all 0.2s
+      &:after
+        position: absolute
+        content: ''
+        display: block
+        height: 3px
+        width: 20px
+        background-color: $text-color-dark   
+        top: 7px    
+        transition: all 0.2s
+    &_active
+      background-color: transparent
+      &:before
+        bottom: 0
+        transform: rotate(135deg)
+      &:after
+        top: 0
+        transform: rotate(-135deg)
+  &-mobile
+    text-align: center
+    position: fixed
+    height: 100vh
+    width: 100vw
+    background-color: #F8C471
+    opacity: 0.95
+    left: -100vw
+    transition: all 0.5s
+    z-index: 11
+    ul
+      text-align: center
+      list-style: none
+      margin-top: 55px
+      padding: 0
+      li
+        border-bottom: 1px solid rgba(55, 55, 55, .3)
+        display: block
+        padding: 11px 0
+        &:last-child
+          border-bottom: none
+        a
+          position: relative
+          color: $text-color-dark
+          text-transform: uppercase
+          text-decoration: none
+          font-size: 26px
+          font-weight: 500
+    &_active
+      left: 0
