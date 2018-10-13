@@ -134,7 +134,7 @@ input:focus, button:focus {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg); } }
 
-.animate {
+.animatess {
   -webkit-animation-name: main-img;
           animation-name: main-img;
   -webkit-animation-duration: 1.5s;
@@ -413,6 +413,9 @@ section.contacts {
     right: 0;
     background: url("../img/feedback-arrow_right.png") center no-repeat; }
 
+.swal-button {
+  background-color: #ff9d00 !important; }
+
 .overlay {
   display: none;
   position: fixed;
@@ -481,6 +484,42 @@ section.contacts {
         font-size: 14px;
         font-weight: 300;
         line-height: 30px; }
+
+.overlay-thanks {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .overlay-thanks .popup-thanks {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 752px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    .overlay-thanks .popup-thanks-close {
+      font-family: Roboto, sans-serif;
+      position: absolute;
+      right: -20px;
+      top: -32px;
+      color: #ffffff;
+      font-size: 35px;
+      font-weight: 300;
+      cursor: pointer; }
+    .overlay-thanks .popup-thanks-title {
+      display: block;
+      width: 100%;
+      mix-heigth: 71px;
+      background-color: #ff9d00;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 21px;
+      text-align: center;
+      font-weight: 500;
+      line-height: 71px; }
 
 .features {
   background: #f4f4f4;
