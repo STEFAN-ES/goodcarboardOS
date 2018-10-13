@@ -1,5 +1,6 @@
 var btntel = $('.button_tel');
-var closemodal = document.querySelector('.popup-close');
+var closemodal = $('.popup-close');
+var formcnf = $('.popup-form__btn');
 var popup = document.querySelector('.popup');
 var overlay = document.querySelector('.overlay');
 
@@ -11,8 +12,8 @@ var overlay = document.querySelector('.overlay');
   };
   
   btntel.on('click', modal);
-  closemodal.addEventListener('click', modalclose);
-
+  closemodal.on('click', modalclose);
+  formcnf.on('click', modalclose);
 
   $(document).ready(function(){
     var link = $('.menu-link-line');

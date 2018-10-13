@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/sweet-alert.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ADNtwFsBAAAAXJSpOwIA_-gJKGA74DIITw3QKmUmO8Epx9gAAAAAAAAAAADmw4ceLphwYp9fWSO49ClH-MLVxA==&lang=ru_RU" type="text/javascript"></script>
-
+  <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50724571 = new Ya.Metrika2({ id:50724571, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/50724571" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50725750 = new Ya.Metrika2({ id:50725750, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/50725750" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <title>Добрый картон</title>
 </head>
 
@@ -89,7 +90,7 @@
                 </div>
                 <!-- /.header-contacts__phone -->
               </div>
-              <button class="header-contacts__button button button_tel wow bounceIn" data-wow-delay="0.1s">
+              <button class="header-contacts__button button button_tel wow bounceIn" data-wow-delay="0.1s" onclick="yaCounter50724571.reachGoal('btnTel'); return true;">
                 <img src="img/icon-phone.png" alt="телефон">
                 <span class="hidden-mobile">Заказать звонок</span>
               </button>
@@ -128,8 +129,8 @@
                 <span class="form-title__important">Образцы упаковки бесплатно!</span>
               </div>
               <!--/.form-title-->
-              <form action="mailer/smart.php" class="form" method="POST">
-                <input class="form__input" type="tel" name="user_phone" placeholder="Введите номер телефона">
+              <form action="mailer/smart.php" class="form" method="POST" onsubmit="yaCounter50725750.reachGoal('submit'); return true;">
+                <input class="form__input" type="tel" name="user_phone" placeholder="Введите номер телефона" required>
                 <button class="button button_big" type="submit">Оставить заявку!</button>
               </form>
               <small class="form-small">*Минимальный заказ 500шт</small>
@@ -149,7 +150,7 @@
       <div class="popup-close">&times;</div>
       <!-- /.popup-close -->
       <div class="popup-form">
-        <form action="mailer/smart.php" class="modal-form" method="POST">
+        <form action="mailer/smart.php" class="modal-form" method="POST" onsubmit="yaCounter50725750.reachGoal('submit'); return true;">
           <div class="popup-form__header">Получите индивидуальное предложение
             <span>на производство и поставку изделий</span>
           </div>
@@ -407,9 +408,9 @@
       </h2>
       <!-- /.offer-title -->
       <div class="offer-form">
-        <form action="mailer/smart.php" method="POST">
+        <form action="mailer/smart.php" method="POST" onsubmit="yaCounter50725750.reachGoal('submit'); return true;">
           <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
-          <input class="offer-form__input" type="tel" name="user_phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+          <input class="offer-form__input" type="tel" name="user_phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required>
           <button type="submit" class="button button_big offer-btn">Оставить заявку!</button>
         </form>
         <small class="form-small">*Минимальный заказ 500шт</small>
@@ -588,7 +589,7 @@
      <!-- /.footer-contacts-block__phone -->
 
     <div class="footer-contacts-block__cta">
-      <button class="button button_tel">Заказать звонок</button>
+      <button class="button button_tel" onclick="yaCounter50724571.reachGoal('btnTel'); return true;">Заказать звонок</button>
     </div> <!-- /.contact-block__cta -->
 
     <div class="footer-contacts-block__mail">
@@ -731,7 +732,7 @@ $('form').trigger('reset');
 
 }, 
 error: function(xhr, str){ 
-swal("не Спасибо!", "Скоро с Вами свяжутся", "success", { 
+swal("Упс!", "Что-то пошло не так", "error", { 
 timer: 3000 
 }); 
 

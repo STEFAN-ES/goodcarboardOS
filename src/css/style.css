@@ -416,6 +416,18 @@ section.contacts {
 .swal-button {
   background-color: #ff9d00 !important; }
 
+button.confirm {
+  background-color: #ff9d00 !important; }
+
+.sweet-alert .icon.success .line {
+  background-color: #ff9d00 !important; }
+
+.sweet-alert .icon.success .placeholder {
+  border: 4px solid rgba(255, 157, 0, 0.2) !important; }
+
+.sweet-alert .icon.success {
+  border-color: #ff9d00 !important; }
+
 .overlay {
   display: none;
   position: fixed;
