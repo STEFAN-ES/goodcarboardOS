@@ -193,6 +193,7 @@
   .main
     padding-top: 144px
     text-align: center
+    padding-bottom: 54px
     &-text
       padding-right: 0
       padding-left: 0
@@ -270,7 +271,7 @@
   .modal-form
     text-align: center
   .numbers
-    margin-bottom: 24px
+    margin-bottom: 20px
     &-block
       display: block
       width: 100%
@@ -288,13 +289,18 @@
   
   /* Бллок с преимуществами */
   .features
-    padding-bottom: 45px
+    padding-bottom: 40px
     &-block
       flex-basis: 100%
       flex-direction: row
       margin-bottom: 15px
-      &__img4
-        flex-basis: 40%
+      max-height: 115px
+      &__img
+        flex-basis: 30%
+  .clients
+    padding-bottom: 20px
+
+
   .clients-block
     max-width: 165px
     max-height: 90px
@@ -326,6 +332,7 @@
     background: url('../img/clients/mobile/img-12.png') center no-repeat
 
   .production
+    padding-bottom: 40px
     .col-md-5
       padding-left: 0
       padding-right: 0
@@ -356,6 +363,7 @@
       &_bottom
         display: none !important
 
+
   .offer
     &-title
       font-size: 20px
@@ -373,15 +381,18 @@
     
   
   .feedback
+    padding-top: 30px
+    padding-bottom: 34px
     &-slider
       padding-left: 0
       padding-right: 0
   
   .slider-feedback-arrow
     position: absolute
-    top: 35%
-    height: 30%
+    top: 50%
+    height: 80px
     width: 22px
+    transform: translateY(-50%)
     border: 1px solid $active-color
     z-index: 9
     cursor: pointer
@@ -393,6 +404,9 @@
       background: $active-color url(../img/arrow-right_active.png) center no-repeat
 
   .menu
+    &-logo-wrap
+      display: flex
+      justify-content: center
     &-mobile
       ul
         margin-top: 85px
@@ -582,7 +596,7 @@
   /* оформляю секцию с преимуществами */
   .features
     padding-top: 18px
-    padding-bottom: 40px
+    padding-bottom: 28px
     &-block
       &s
         justify-content: center
@@ -598,8 +612,10 @@
 
   
   .products
+    padding-top: 25px
     &-block
       &__img
+        max-height: 230px
         margin-bottom: 8px
       &__title
         &-mobile
@@ -607,9 +623,22 @@
         font-size: 18px
         margin-bottom: 15px
   
+  .offer
+    padding-top: 45px
+    padding-bottom: 47px
+    &-title
+      margin-bottom: 20px
+    &-form
+      &__label
+        margin-bottom: 14px
+      &__input
+        font-size: 13px
+        font-weight: 300
+        padding: 16px
   
   /* Оформляю блок с клиентами */
   .clients
+
     .section-title
       font-size: 22px
       margin-bottom: 17px
@@ -669,6 +698,7 @@
   
   .production
     padding-top: 28px
+    padding-bottom: 33px
     &-text
       text-align: center
       &__title
@@ -680,6 +710,8 @@
         font-weight: 300
         line-height: 18px
         margin-bottom: 22px
+        padding-left: 5px
+        padding-right: 5px
     &-slider                //Адаптирую слайдер производства
       &_bottom
         display: none
@@ -694,7 +726,7 @@
 
   .footer //оформляю блок с картой
     &-contacts
-      padding-top: 36px
+      padding-top: 27px
       padding-bottom: 0
       text-align: center
       &-block
@@ -719,6 +751,8 @@
       &__title
         margin-bottom: 12px
         font-size: 22px
+    &-text
+      font-size: 10px
 
 
 
@@ -774,6 +808,7 @@
     &-contacts
       &-block
         padding-left: 54px
+        padding-right: 42px
         &__adress
           position: relative
           &:before
@@ -911,3 +946,10 @@
         a
           &:hover
             color: $active-color
+  
+@media (min-width: 769px) and (max-width: 992px)
+  .products
+    &-block
+      &__title
+        &-foure
+          margin-bottom: 51px
