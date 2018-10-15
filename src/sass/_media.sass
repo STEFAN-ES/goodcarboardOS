@@ -133,7 +133,6 @@
     &-block
       flex-basis: 49%
       flex-direction: row
-      text-align: center
   .clients-block
     max-width: 220px
     flex-basis: 33%
@@ -293,8 +292,9 @@
     &-block
       flex-basis: 100%
       flex-direction: row
-      text-align: center
       margin-bottom: 15px
+      &__img4
+        flex-basis: 40%
   .clients-block
     max-width: 165px
     max-height: 90px
@@ -407,10 +407,29 @@
       &-block
         position: static
         padding-bottom: 24px
+        padding-top: 0
+        &__title
+          &_two
+            margin-top: 11px
+        &__adress
+          font-size: 14px
+          margin-bottom: 25px
+        &__phone
+          font-size: 14px
+          &-one
+            display: inline-block
+            margin-bottom: 7px
+        &__mail
+          font-size: 14px
+        &__cta
+          margin-bottom: 21px
+      &__title
+        font-size: 22px
+        margin-bottom: 12px
 
         
   .map
-    height: 400px
+    height: 420px
     border: 15px solid #fff
     &-text
       font-size: 11px  
@@ -565,14 +584,17 @@
     padding-top: 18px
     padding-bottom: 40px
     &-block
+      &s
+        justify-content: center
       max-height: 113px
       padding: 19px 16px
       flex-basis: 100%
       margin-bottom: 8px
       text-align: left
       flex-direction: row
+      max-width: 450px
       &__img
-        flex-basis: 40%
+        flex-basis: 60%
 
   
   .products
@@ -670,7 +692,33 @@
         margin-top: 55px
 
 
-
+  .footer //оформляю блок с картой
+    &-contacts
+      padding-top: 36px
+      padding-bottom: 0
+      text-align: center
+      &-block
+        position: static
+        padding-bottom: 24px
+        padding-top: 0
+        &__title
+          &_two
+            margin-top: 11px
+        &__adress
+          font-size: 14px
+          margin-bottom: 25px
+        &__phone
+          font-size: 14px
+          &-one
+            display: inline-block
+            margin-bottom: 7px
+        &__mail
+          font-size: 14px
+        &__cta
+          margin-bottom: 21px
+      &__title
+        margin-bottom: 12px
+        font-size: 22px
 
 
 
@@ -685,57 +733,6 @@
     margin-bottom: 7px
   
 
-
-@media (min-width: 1200px )
-  .img-wrap-1
-    background: url('../img/clients/img-1.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-1-1.png') center no-repeat
-  .img-wrap-2
-    background: url('../img/clients/img-2.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-2-1.png') center no-repeat
-  .img-wrap-3
-    background: url('../img/clients/img-3.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-3-1.png') center no-repeat
-  .img-wrap-4
-    background: url('../img/clients/img-4.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-4-1.png') center no-repeat
-  .img-wrap-5
-    background: url('../img/clients/img-5.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-5-1.png') center no-repeat
-  .img-wrap-6
-    background: url('../img/clients/img-6.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-6-1.png') center no-repeat
-  .img-wrap-7
-    background: url('../img/clients/img-7.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-7-1.png') center no-repeat
-  .img-wrap-8
-    background: url('../img/clients/img-8.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-8-1.png') center no-repeat
-  .img-wrap-9
-    background: url('../img/clients/img-9.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-9-1.png') center no-repeat
-  .img-wrap-10
-    background: url('../img/clients/img-10.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-10-1.png') center no-repeat
-  .img-wrap-11
-    background: url('../img/clients/img-11.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-11-1.png') center no-repeat
-  .img-wrap-12
-    background: url('../img/clients/img-12.png') center no-repeat 
-    &:hover
-      background: url('../img/clients/img-12-1.png') center no-repeat
-
  
 
   
@@ -746,7 +743,7 @@
       align-items: center
       max-height: 132px
       min-width: 291px
-      flex-basis: 30%
+      flex-basis: 100%
       padding: 28px 19px
       margin-bottom: 30px
       &__img
@@ -826,3 +823,91 @@
     z-index: 10
   section.contacts
     padding-top: 57px
+  
+  .img-wrap-1
+    background: url('../img/clients/img-1-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-2
+    background: url('../img/clients/img-2-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-3
+    background: url('../img/clients/img-3-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-4
+    background: url('../img/clients/img-4-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-5
+    background: url('../img/clients/img-5-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-6
+    background: url('../img/clients/img-6-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-7
+    background: url('../img/clients/img-7-1.png') center no-repeat
+    filter: grayscale(100%) 
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-8
+    background: url('../img/clients/img-8-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-9
+    background: url('../img/clients/img-9-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-10
+    background: url('../img/clients/img-10-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-11
+    background: url('../img/clients/img-11-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+  .img-wrap-12
+    background: url('../img/clients/img-12-1.png') center no-repeat 
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+
+
+  .clients-block
+    &:hover
+      border: 1px solid rgba(0, 0, 0, 0.5)
+  .header
+    &-contacts
+      &__phone
+        a
+          &::before
+            content: ''
+            bottom: 0
+            right: 0
+            position: absolute
+            width: 0%
+            height: 2px
+            background-color: $active-color
+            transition: 0.2s
+          &:hover:before
+            width: 100%
+            left: 0
+  nav
+    .nav-wrap
+      .item
+        a
+          &:hover
+            color: $active-color
