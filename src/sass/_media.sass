@@ -69,9 +69,13 @@
     background: url('../img/clients/img-12-1.png') center no-repeat
 
   
-@media (max-width: 992px)
+@media (max-width: 991px)
   .hidden-box
     display: none
+  .menu
+    &-logo-wrap
+      display: flex
+      justify-content: left
   .nav
     display: none
   .main
@@ -227,6 +231,8 @@
         &:last-child
           margin: 0
           margin-left: 0
+      &__button
+        padding: 10px 10px
   .form
     &-title
       font-size: 18px
@@ -234,7 +240,9 @@
       &__important
         display: block
     &__input
-      font-size: 13px 
+      font-size: 13px
+    &-small
+      padding-left: 0 
   .overlay
     .popup
       display: block
@@ -295,10 +303,11 @@
       flex-direction: row
       margin-bottom: 15px
       max-height: 115px
-      &__img
-        flex-basis: 30%
   .clients
     padding-bottom: 20px
+
+  .products
+    padding-bottom: 10px
 
 
   .clients-block
@@ -386,6 +395,12 @@
     &-slider
       padding-left: 0
       padding-right: 0
+      &__item
+        text-align: center
+      &__wrap
+        display: inline-block
+    .section-title
+      margin-bottom: 15px
   
   .slider-feedback-arrow
     position: absolute
@@ -406,7 +421,7 @@
   .menu
     &-logo-wrap
       display: flex
-      justify-content: center
+      justify-content: left
     &-mobile
       ul
         margin-top: 85px
@@ -466,7 +481,6 @@
       height: 35px
       background: $active-color url('../img/header-logo_mobile.png') center no-repeat
       border-radius: 4px
-    &-contacts
       &__phone
         &s
           flex-direction: column
@@ -485,13 +499,13 @@
     display: none
   .header-contacts__button
     padding: 6px
-    width: 27px
-    height: 27px
+    width: 36px
+    height: 36px
     margin-left: 14px
     img
+      width: 15px
       margin-right: 0
-      width: 14px
-      padding-bottom: 3px
+      padding-bottom: 0
   
   .main
     padding-top: 102px
@@ -531,6 +545,7 @@
         display: inline-block
         margin: 0 0 13px 0
         width: 100%
+        max-width: 290px
         padding: 16px 20px
       &-small
         padding-left: 0
@@ -607,8 +622,6 @@
       text-align: left
       flex-direction: row
       max-width: 450px
-      &__img
-        flex-basis: 60%
 
   
   .products
@@ -635,6 +648,7 @@
         font-size: 13px
         font-weight: 300
         padding: 16px
+        max-width: 290px
   
   /* Оформляю блок с клиентами */
   .clients
@@ -779,11 +793,17 @@
       min-width: 291px
       flex-basis: 100%
       padding: 28px 19px
-      margin-bottom: 30px
       &__img
         margin-right: 10px
 
-/* Слайдер с отзывами */
+@media (min-width: 400px) and (max-width: 524px)
+  .clients
+    &-block
+      &s
+        justify-content: space-around
+        max-width: 420px
+        margin-left: auto
+        margin-right: auto
   
 /* Делаю адаптив блока со слайдером */
 @media (min-width: 769px)
@@ -799,11 +819,11 @@
         text-align: justify
         max-width: 379px
         width: 100%
-  section.contacts
-    .menu-link
-      display: none
   .hidden-desktop
     display: none  
+  section.contacts
+    .menu-link
+      display: flex
   .footer
     &-contacts
       &-block
@@ -850,6 +870,7 @@
     flex: 0 0 100%
     max-width: 100%  
 
+
 /* Закрепляю меню на десктопе  */
 @media (min-width: 993px)
   .nav
@@ -858,6 +879,8 @@
     z-index: 10
   section.contacts
     padding-top: 57px
+    .menu-link
+      display: none
   
   .img-wrap-1
     background: url('../img/clients/img-1-1.png') center no-repeat 
@@ -946,6 +969,22 @@
         a
           &:hover
             color: $active-color
+
+  .button
+    &:hover
+      background-color: lighten($active-color, 5)
+    &-o
+      &:hover
+        background-color: $active-color
+        color: #ffffff
+        border: 1px solid transparent
+  
+  .features
+    &-block
+      max-height: 135px
+  .products
+    &_title
+      margin-bottom: 28px
   
 @media (min-width: 769px) and (max-width: 992px)
   .products
@@ -953,3 +992,26 @@
       &__title
         &-foure
           margin-bottom: 51px
+  .menu
+    &-link
+      &-line
+        width: 25px
+        &::before
+          width: 25px
+          bottom: 8px
+        &::after
+          width: 25px
+          top: 8px
+      &_active
+        background-color: transparent
+        &:before
+          bottom: 0
+          transform: rotate(135deg)
+        &:after
+          top: 0
+          transform: rotate(-135deg)
+
+@media (width: 992px)
+  section.contacts
+    .menu-link
+      display: none

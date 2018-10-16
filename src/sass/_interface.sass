@@ -28,16 +28,10 @@
   padding: 13px 21px
   outline: none
   cursor: pointer
-  &:hover
-    background-color: lighten($active-color, 5)
   &-o
     background-color: transparent
     color: rgba(#373737, 0.5)
     border: 1px solid rgba(#373737, 0.5)
-    &:hover
-      background-color: $active-color
-      color: #ffffff
-      border: 1px solid transparent
   img
     vertical-align: middle
     margin: 0 10px 0 0
@@ -69,8 +63,9 @@
       background: $active-color url(../img/arrow-right_active.png) center no-repeat
   &-mobile
     position: absolute
-    top: 35%
-    height: 30%
+    top: 50%
+    height: 80px
+    transform: translateY(-50%)
     width: 22px
     border: 1px solid $active-color
     z-index: 9
