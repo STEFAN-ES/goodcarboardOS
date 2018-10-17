@@ -76,9 +76,19 @@
     &-logo-wrap
       display: flex
       justify-content: left
+    &-mobile
+      ul
+        margin-top: 85px
+  section.contacts
+    position: fixed
+    width: 100%
+    background-color: #f4f4f4
+    z-index: 12
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
   .nav
     display: none
   .main
+    padding-top: 144px
     text-align: center
     &-text
       padding-right: 70px
@@ -168,14 +178,34 @@
     background: url('../img/clients/img-12-1.png') center no-repeat
   
   .production
+    padding-bottom: 40px
+    .col-lg-5
+      padding-left: 0
+      padding-right: 0
+    .row
+      flex-direction: column-reverse
+    padding-top: 28px
     &-text
+      text-align: center
+      &__title
+        text-transform: uppercase
+        line-height: 18px
+        font-size: 20px
+        margin-bottom: 17px
       &__descr
         font-size: 14px
-        line-height: 23px
+        font-weight: 300
+        line-height: 18px
+        margin-bottom: 22px   
     &-slider
-      &_bottom
-        max-height: 58.5px
+      &_top
+        height: 380px
         overflow: hidden
+        img
+          object-fit: cover
+          height: 380px
+      &_bottom
+        display: none !important
 
                                               /* ~media 992px */
   
@@ -399,6 +429,9 @@
         text-align: center
       &__wrap
         display: inline-block
+    .slick-slider
+      max-width: 305px
+      margin: auto
     .section-title
       margin-bottom: 15px
   
@@ -807,18 +840,6 @@
   
 /* Делаю адаптив блока со слайдером */
 @media (min-width: 769px)
-  .production
-    .col-md-5
-      padding-left: 0
-    .col-md-7
-      padding-right: 0
-    &-text
-      padding-top: 20px
-      &__descr
-        padding-left: 25px
-        text-align: justify
-        max-width: 379px
-        width: 100%
   .hidden-desktop
     display: none  
   section.contacts
@@ -872,7 +893,7 @@
 
 
 /* Закрепляю меню на десктопе  */
-@media (min-width: 993px)
+@media (min-width: 992px)
   .nav
     position: fixed
     width: 100%
@@ -942,7 +963,19 @@
     filter: grayscale(100%)
     &:hover
       filter: grayscale(0%)
-
+  
+  .production
+    .col-lg-5
+      padding-left: 0
+    .col-lg-7
+      padding-right: 0
+    &-text
+      padding-top: 20px
+      &__descr
+        padding-left: 25px
+        text-align: justify
+        max-width: 379px
+        width: 100%
 
   .clients-block
     &:hover
@@ -1015,3 +1048,23 @@
   section.contacts
     .menu-link
       display: none
+
+  
+  
+@media (min-width: 992px) and (max-width: 1100px)
+  .main-img
+    max-width: 350px
+    left: -10px
+    &::before
+      width: 350px
+      height: 350px
+      margin-left: -155px
+      top: -6px
+  .footer-contacts-block
+    left: 40px
+
+@media (min-width: 992px) and (max-width: 1014px)
+  .feedback
+    .slick-slider
+      max-width: 690px
+      margin: auto
